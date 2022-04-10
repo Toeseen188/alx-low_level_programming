@@ -1,7 +1,8 @@
 #include <unistd.h>
 /*
- * main-entry point
- *Return:return 1 to indicate the error
+ * main - entry point for all c program
+ *
+ * Return: return 1 to indicate the error
  *
  */
 int main(void)
