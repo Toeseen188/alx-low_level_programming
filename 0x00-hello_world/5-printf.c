@@ -1,7 +1,7 @@
 #include <stdio.h>
-/*
- * This program print with the standard
- * output function printf
+/**
+ *main-Entry point. This program print with the standard output function printf
+ *Return: return 0 after the main function run successfully
 */
 int main(void)
 {
