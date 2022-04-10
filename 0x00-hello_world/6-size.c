@@ -1,19 +1,20 @@
 #include <stdio.h>
-char c;
-int i;
-float f;
-long int l;
-long long int m;
 /**
  *main-main entry for all c program
  *Return: returning 0 means its a success
  */
 int main(void)
 {
-	printf("Size of a char: %lu byte(s)\n",(unsigned long)sizeof(c));
-	printf("Size of an int: %lu byte(s)\n",(unsigned long)sizeof(i));
-	printf("Size of a long int: %lu byte(s)\n",(unsigned long)sizeof(l));
-	printf("Size of a long long: %lu byte(s)\n",(unsigned long)sizeof(m));
-	printf("Size of a float: %lu byte(s)\n",(unsigned long)sizeof(f));
+	char a;
+	int b;
+	float c;
+	long int d;
+	long long int  m;
+
+	printf("Size of a char: %lu byte(s)\n", (unsigned long)sizeof(a));
+	printf("Size of an int: %lu byte(s)\n", (unsigned long)sizeof(b));
+	printf("Size of a long int: %lu byte(s)\n", (unsigned long)sizeof(d));
+	printf("Size of a long long: %lu byte(s)\n", (unsigned long)sizeof(m));
+	printf("Size of a float: %lu byte(s)\n", (unsigned long)sizeof(c));
 	return (0);
 }
