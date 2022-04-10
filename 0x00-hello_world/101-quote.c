@@ -1,9 +1,9 @@
 #include <unistd.h>
-/*
+/**
  * main - entry point for all c program
  *
+ * Description: wahala too much o
  * Return: return 1 to indicate the error
- *
  */
 int main(void)
 {
