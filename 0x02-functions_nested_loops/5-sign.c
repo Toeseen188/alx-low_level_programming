@@ -3,7 +3,7 @@
  * print_sign - function to check for signs +, 0, -
  * Return: return 1 for +, return 0 for sign and return -1 for -
  * @n : local parameter for the function
- */*
+ */
 int print_sign(int n)
 {
 	if (n > 0)
@@ -21,4 +21,5 @@ int print_sign(int n)
 	_putchar('-');
 	return (-1);
 	}
+
 }
