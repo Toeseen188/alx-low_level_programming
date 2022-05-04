@@ -9,10 +9,10 @@
 int main(int argc, char *argv[])
 
 {
-	int i = 0;
+	int i = argc;
 
 	argv[i] = argv[i];
-	printf("%d\n", argc);
+	printf("%d\n", i);
 
 	return (0);
 }
