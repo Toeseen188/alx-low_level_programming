@@ -1,44 +1,30 @@
 #include "holberton.h"
 #include <stdlib.h>
+
 /**
- * _strdup - allocate and duplicate string
- *@c: param
- * Return: returns NULL if str || s == Null, otherwise return s
+ *_strdup - allocate a string.
+ *@str: string.
+ *Return: pointer to string if success.
  */
-/* function prototype*/
-int _strlen(char *c);
 
 char *_strdup(char *str)
 {
-	char *s;
 	int i;
+	char *str1;
 
-	int a = _strlen(str) + 1;
+	if (str == NULL)
+	return (NULL);
 
-	s = malloc(a * sizeof(char));
-	if (str == NULL || s == NULL)
-	return ('\0');
-	else
-	for (i = 0; i < a; i++)
-	s[i] = str[i];
-	return (s);
-	free(s);
-
-
-}
-
-/**
- * _strlen - length of a string
- * @c: param
- * Return: i
- */
-
-int _strlen(char *c)
-{
-	int i;
-
-	i = 0;
-	while (c[i] != '\0')
+	for (i = 0; str[i]; i++)
+	;
 	i++;
-	return (i);
+	str1 = malloc(sizeof(char) * i);
+
+	if (str1 == NULL)
+	return (NULL);
+
+	for (i = 0; str[i] != '\0'; i++)
+	str1[i] = str[i];
+	str1[i] = '\0';
+	return (str1);
 }
