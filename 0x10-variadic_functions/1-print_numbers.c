@@ -21,11 +21,11 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	printf("%d", va_arg(ap, int));
 	while (i < (n - 1))
 	{
-	printf("%s ", separator);
+	printf("%s", separator);
 	break;
 	}
 	i++;
 	}
-	va_end(ap);
 	printf("\n");
+	va_end(ap);
 }
