@@ -15,7 +15,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	unsigned int i = 0;
 
 	va_start(ap, n);
-	if (*separator != '\0')
+	if (separator != NULL)
 	{
 	while (i < n)
 	{
@@ -30,7 +30,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	}
 	else
 	{
-	exit(0);
+
 	}
 	printf("\n");
 	va_end(ap);
