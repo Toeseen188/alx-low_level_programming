@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
+#include <string.h>
 /**
  * print_numbers - function with variadic param
  * @n: unsigned int var
@@ -14,10 +15,8 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	unsigned int i = 0;
 
 	va_start(ap, n);
-	while (*separator == '\0')
+	if (*separator != '\0')
 	{
-	exit(0);
-	}
 	while (i < n)
 	{
 	printf("%d", va_arg(ap, int));
@@ -27,6 +26,11 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	break;
 	}
 	i++;
+	}
+	}
+	else
+	{
+	exit(0);
 	}
 	printf("\n");
 	va_end(ap);
