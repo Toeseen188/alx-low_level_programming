@@ -54,18 +54,17 @@ int main(int argc, char *argv[])
 	n_chars = read(file_from, buffer, 1024);
 	if (n_chars == -1)
 	error_file(-1, 0, argv);
+
 	n_write = write(file_to, buffer, n_chars);
 	if (n_write == -1)
 	error_file(0, -1, argv);
 	}
-
 	err_close = close(file_from);
 	if (err_close == -1)
 	{
 	dprintf(STDERR_FILENO, "Error: Cant close fd %d\n", file_from);
 	exit(100);
 	}
-
 	err_close = close(file_to);
 	if (err_close == -1)
 	{
@@ -73,4 +72,4 @@ int main(int argc, char *argv[])
 	exit(100);
 	}
 	return (0);
-	}
+}
