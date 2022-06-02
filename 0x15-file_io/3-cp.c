@@ -48,9 +48,7 @@ int main(int argc, char *argv[])
 	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
 	error_file(file_from, file_to, argv);
 
-	n_chars = 1024;
-	while (n_chars == 1024)
-	{
+
 	n_chars = read(file_from, buffer, 1024);
 	if (n_chars == -1)
 	error_file(-1, 0, argv);
@@ -58,7 +56,7 @@ int main(int argc, char *argv[])
 	n_write = write(file_to, buffer, n_chars);
 	if (n_write == -1)
 	error_file(0, -1, argv);
-	}
+
 	err_close = close(file_from);
 	if (err_close == -1)
 	{
