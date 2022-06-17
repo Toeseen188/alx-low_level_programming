@@ -1,26 +1,21 @@
 #include "main.h"
 /**
- * _strcmp - string compare
- * @s1: arg
- *@s2: arg
- *Return: return cmp
-*/
-
+ * _strcmp - compares two strings
+ *
+ * @s1: char pointer
+ * @s2: char pointer
+ *
+ * Return: difference between ascii number
+ */
 int _strcmp(char *s1, char *s2)
 {
-	int i = 0;
-	int cmp;
+	int length;
 
-	while (s1[i] != '\0' && s2[i] != '\0' && cmp == 0)
+	for (length = 0; s1[length] != 0; length++)
 	{
-	if (s1[i] > s2[i])
-	cmp = -15;
-	else if (s1[i] < s2[i])
-	cmp = 15;
-	else
-	cmp = 0;
+	if (s1[length] - s2[length] != 0)
+	return (s1[length] - s2[length]);
 	}
-	i++;
 
-	return (cmp);
+	return (0);
 }
