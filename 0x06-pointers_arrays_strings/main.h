@@ -1,5 +1,3 @@
-#ifndef MAIN_H
-#define MAIN_H
 char *_strcat (char *dest, char *scr);
 char *_strncat (char *dest, char *scr, int n);
 char *_strncpy (char *dest, char *scr, int n);
@@ -11,4 +9,3 @@ char *rot13(char *);
 char *leet(char *);
 void print_number(int n);
 char *infinite_add(char *n1, char *n2, char *r, int size_r);
-#endif
