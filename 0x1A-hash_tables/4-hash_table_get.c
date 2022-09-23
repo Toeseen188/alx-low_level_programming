@@ -10,9 +10,6 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	unsigned long int index, i;
 	char *value = NULL;
 
-	if (key == NULL || *key == '\0')
-		return (NULL);
-
 	index = key_index((const unsigned char *)key, ht->size);
 
 	for (i = index; ht->array[i]; i++)
